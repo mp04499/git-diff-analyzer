@@ -194,7 +194,7 @@ impl CodeAnalysisEngine {
     pub fn analyze_git_diff(&self, repo_path: &Path, commit_hash: &str, url: &str) -> Result<Vec<CodeChange>> {
         info!("Starting analysis of repository: {}", repo_path.display());
 
-        let repo = match build::RepoBuilder::new().branch("dev").clone(url, repo_path) {
+        let repo = match build::RepoBuilder::new().clone(url, repo_path) {
             Ok(repo) => repo,
             Err(e) => {
                 warn!("Failed to open repository at {}: {}", repo_path.display(), e);
