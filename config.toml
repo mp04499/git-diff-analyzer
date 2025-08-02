@@ -1,0 +1,9 @@
+[ai_service]
+# AI recommendation service endpoint URL
+url = "http://192.168.50.234:8000/analyze"
+
+# Timeout for AI API requests in seconds
+timeout_seconds = 30
+
+# Whether AI recommendations are enabled
+enabled = true
